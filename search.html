@@ -3,22 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
+  <link rel="stylesheet" href="css/TopBottom.css">
+  <link rel="stylesheet" href="css/search.css">
 </head>
 <body>
 <header>
   <div id="action" class="action">
-    <a id="login" class="login"></a>
-    <a id="regsiter" class="regsiter"></a>
-    <a id="username" class="username"></a>
-    <a id="logout" class="logout"></a>
-    <a id="shop-car" class="shop-car"></a>
+    <a id="login" class="login" href="login.html">Hi,请登录</a>
+    <a id="regsiter" class="regsiter" href="regsiter.html">注册</a>
+    <a id="username" class="username">用户名</a>
+    <a id="logout" class="logout">退出</a>
+    <a id="shop-car" class="shop-car" href="car.html">购物车</a>
   </div>
-  <div id="searchbox" class="search">
-    <div id="logo" class="logo"></div>
-    <div id="search" class="search"></div>
+  <div id="searchbox" class="searchbox">
+    <div id="logo" class="logo">
+      <img src="images/logo.png"/>
+    </div>
+    <div id="search" class="search">
+      <input type="text" class="search-left" placeholder="请输入要搜索的宝贝" id="searchtext"/>
+      <input type="button" class="search-button" value="搜索" />
+    </div>
   </div>
 </header>
-<section></section>
+<section>
+  <div id="navbox">
+    <ul id="nav"></ul>
+  </div>
+  <div id="box">
+    <ul id="goods-kind"></ul>
+  </div>
+</section>
+<script src="js/myajax.js"></script>
+<script src="js/search.js"></script>
 <footer>
   <ul id="permission" class="permission">
     <li></li>
