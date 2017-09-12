@@ -1,0 +1,42 @@
+section{
+  width:1300px;
+  height:510px;
+  margin: 0 auto;
+  background-color:#f7f7f7;
+  border-top:1px solid #dbdbdb;
+}
+#div0{
+  width: 980px;
+  height: 378px;
+  border:4px solid #cecccc;
+  margin:0 auto;
+  margin-top:66px;
+}
+#div0 #img{
+  float:left;
+}
+#div0 #text,#div0 #password{
+  width:290px;
+  height:32px;
+}
+#div0 #button{
+  width:294px;
+  height:37px;
+  background-color:#dd2c39;
+  border:1px solid #be0813;
+  border-radius:4px;
+}
+#div0 #text{
+  margin:60px 0  0 102px;
+}
+#div0 #password{
+  margin:40px 0  0 102px;
+}
+#div0 #button{
+  margin:40px 0  0 102px;
+}
+#div0 a #img1{
+  width:285px;
+  height:40px;
+  margin:30px 0  0 102px;
+}

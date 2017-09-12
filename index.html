@@ -3,28 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
-  <link rel="stylesheet" href="TopBottom.css" />
+  <link rel="stylesheet" href="css/TopBottom.css" />
 </head>
 <body>
 	<header>
 	  <div id="action" class="action">
 	  	<span>Hi ! 欢迎来到央视网商城</span>
-	  	<a id="logout" class="logout" href="index.html">退出</a>   
-	    <a id="username" class="username">用户名</a>
-	    <a id="shop-car" class="shop-car" href="car.html">购物车</a>
-	    <a id="login" class="login"href="login.html">请登录</a>
-	    <a id="regsiter" class="regsiter" href="regsiter.html">免费注册</a>
+			<a id="logout" class="logout" href="javascript:localStorage.clear(); location.reload();">退出</a>
+			<a id="username" class="username" href="#">用户名</a>
+			<a id="shop-car" class="shop-car" href="car.html">购物车</a>
+			<a id="login" class="login" href="login.html">请登录</a>
+			<a id="regsiter" class="regsiter" href="regsiter.html">免费注册</a>
 	  </div>
 	  <div id="searchbox" class="searchbox">
 	    <div id="logo" class="logo">
 	    	<img src="images/logo.png"/>
 	    </div>
 	    <div id="search" class="search">
-	    	<input type="text" class="search-left" placeholder="请输入要搜索的宝贝"  />
+	    	<input type="text" class="search-left" placeholder="请输入要搜索的宝贝" id="searchtext"/>
 	    	<input type="button" class="search-button" value="搜索" />	
 	    </div>
 	  </div>
 	</header>
+	<script src="js/if-login.js"></script>
+	<script src="js/searchkey.js"></script>
 	<section>
 		<div class="shop-nav">
 			<ul id="shop-list" class="shop-list"></ul>
@@ -89,13 +91,12 @@
 	  	</ul>
 	  </div>
 	</footer>
-	<script src="animate.js" type="text/javascript" charset="utf-8"></script>
-	<script src="myajax.js" type="text/javascript" charset="utf-8"></script>
-	<script src="Username.js" type="text/javascript" charset="utf-8"></script>
-	<script type="text/javascript" src="shop-list.js" ></script>
-	<script src="search.js" type="text/javascript" charset="utf-8"></script>
-	<script src="carousel.js" type="text/javascript" charset="utf-8"></script>
-	<script src="hot-goods.js" type="text/javascript" charset="utf-8"></script>
-	<script src="returnTop.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/animate.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/myajax.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/shop-list.js" ></script>
+	<script src="js/carousel.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/hot-goods.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/returnTop.js" type="text/javascript" charset="utf-8"></script>
+
 </body>
 </html>

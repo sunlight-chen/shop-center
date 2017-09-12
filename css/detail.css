@@ -1,0 +1,49 @@
+section{
+  width: 1300px;
+  height:496px;
+  background-color:#f7f7f7;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+#detailsbox {
+  width: 980px;
+  height: 433px;
+  border: 4px solid #fd4040;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+#add-to-cart {
+  right: 20px;
+  bottom: 10px;
+  width: 70px;
+  height: 30px;
+  position: absolute;
+}
+#price{
+  position: absolute;
+  right: 20px;
+  bottom: 50px;
+  color: #fd4040;
+}
+.smallPic {
+  position: relative;
+  width: 433px;
+  height: 433px;
+  float: left;
+  border-right: 4px solid #f01e2d;
+}
+#introduce{
+  width: 543px;
+  height: 433px;
+  float: left;
+  font-size: 20px;
+  position: relative;
+}
+body #box{
+  height: 550px;
+}
+.namedesc{
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
