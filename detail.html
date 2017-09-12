@@ -2,35 +2,77 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>商品详情页</title>
+  <style>
+    section{
+      width:100%;
+      height:510px;
+      background-color:#f7f7f7;
+      border-top:1px solid #dbdbdb;
+      border-bottom:3px solid #850077;
+    }
+    #div0{
+      width: 980px;
+      height: 502px;
+      border:4px solid #cecccc;
+      margin:0 auto;
+
+    }
+  </style>
 </head>
 <body>
 <header>
   <div id="action" class="action">
-    <a id="login" class="login"></a>
-    <a id="regsiter" class="regsiter"></a>
-    <a id="username" class="username"></a>
-    <a id="logout" class="logout"></a>
-    <a id="shop-car" class="shop-car"></a>
+    <a id="login" class="login">登录</a>
+    <a id="regsiter" class="regsiter">注册</a>
+    <a id="username" class="username">用户名</a>
+    <a id="logout" class="logout">退出</a>
+    <a id="shop-car" class="shop-car">购物车</a>
   </div>
   <div id="searchbox" class="search">
     <div id="logo" class="logo"></div>
     <div id="search" class="search"></div>
   </div>
 </header>
-<section></section>
+<section>
+  <div id="div0">
+
+  </div>
+</section>
+<script src="js/myajax.js" charset="utf-8"></script>
+<script>
+  var goods_id = getQueryString("goods_id");
+  console.log(goods_id);
+  myajax.get("http://h6.duchengjiu.top/shop/api_goods.php",{goods_id},function (err,responseText) {
+     var json = JSON.parse(responseText);
+     console.log(json);
+     document.body.innerHTML = `
+<div>
+   <div><img src="${json.data[0].goods_thumb}"</div>
+   <div>${obj.goods_name}</div>
+   <div>${obj.price}</div>
+   <div><input type="button" id="add-to-cart" value="添加购物车"></div>
+</div>
+`
+  });
+  document.body.onclick = function (event) {
+      event = event || window.event;
+      var target = event.target.srcElement;
+      if(target.id === "add-to-cart"){
+          console.log("添加到购物车");
+          myajax.post("http://h6.duchengjiu.top/shop/api_cart.php?token="localStorage.token,{goods_id,number:1},function (error,responseText) {
+              var json = JSON.parse(responseText);
+              var data = json.data;
+              console.log(json);
+              if(json.code === 0){
+                  alert("添加到购物车成功");
+              }
+          })
+      }
+  }
+</script>
 <footer>
-  <ul id="permission" class="permission">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
+
 </footer>
 </body>
 </html>
