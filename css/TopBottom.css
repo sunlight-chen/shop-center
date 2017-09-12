@@ -13,7 +13,7 @@ body,html{
 	height: 100%;
 }
 header{
-	width: 1300px;
+	width: 100%;
 	margin:0 auto;
 }
 .action{
@@ -34,13 +34,13 @@ header{
 	float: right;
 }
 .searchbox{
-	width:1300px ;
+	width:100%;
 	overflow: hidden;
 }
 .searchbox > .logo > img {
 	width: 160px;
 	height: 65px;
-	margin: 40px 125px 0 55px;
+	margin: 20px 125px 0 55px;
 	float: left;
 }
 .searchbox > .search{
@@ -63,7 +63,7 @@ header{
 .search-button{
 	width:135px;
 	height:40px;
-	background: red;
+	background: #fd4040;
 	float: left;
 	color: #FFFFFF;
 	font-size: 19px;
@@ -72,7 +72,7 @@ header{
 	outline: none;
 }
 footer{
-	width: 1300px;
+	width: 100%;
 	height: 200px;
 	background: #AAAAAA;
 	margin:0 auto;
@@ -111,4 +111,159 @@ footer > .footer-bottom > .bottom-text{
 footer > .footer-bottom > .bottom-text > li{
 	text-align: center;
 	line-height: 20px;
+}
+.shop-nav{
+	width: 100%;
+	height: 40px;
+	background: #fd4040;
+	margin-top: 20px;
+}
+.shop-list{
+	width: 1000px;
+	height: 40px;
+	margin-left:30px ;
+	margin: 0 auto;
+}
+.shop-list >li{
+	float: left;
+	width: 100px;
+	height: 40px;
+}
+.shop-list >li:hover{
+	background: #f01e2d;
+}
+.shop-list >li > a{
+	color: #FFFFFF;
+	font-size: 15px;
+	margin-left: 30px;
+	line-height: 40px;
+}
+.carousel{
+	width: 100%;
+	height: 400px;
+}
+.carousel-left,.carousel-right{
+	width: 230px;
+	height: 400px;
+	float: left;
+	margin: 0 20px;
+}
+.carousel-right{
+	float: right;
+}
+.carousel-center{
+	width: 800px;
+	height: 400px;
+	overflow: hidden;
+	float: left;
+	position: relative;
+}
+.carousel-center > .imagesList{
+	height: 400px;
+	width: 8000px;
+	position: absolute;
+}
+.carousel-list{
+	position: absolute;
+}
+.carousel-list > li{
+	float: left;
+}
+.carousel-list > li > a > img{
+	display:block;
+	width: 800px;
+	height: 400px;
+	
+}
+.left-button , .right-botton{
+	display: block;
+	position: absolute;
+	top: 130px;
+	width: 40px;
+	height: 130px;
+	border: none;
+	outline: none;
+	background: #999999;
+	z-index: 100;
+}
+.left-botton{
+	left: 0;
+}
+.right-botton{
+	right: 0;
+}
+.circle-list{
+	position: absolute;
+	left: 400px;
+	bottom: 5px;
+	z-index: 100;
+}
+.circle-list > li{
+	float: left;
+	width: 17px;
+	height: 17px;
+	border-radius:100% ;
+	background: #666666;
+	margin-left:10px ;
+	text-align: center;
+}
+.circle-list  .current{
+	background: blue;
+}
+h5{
+	display: block;
+	width: 100%;
+	height: 50px;
+	background: #CCCCCC;
+	color: red;
+	font-size: 40px;
+	font-weight: 500px;
+	text-align: center;
+	margin: 10px 0;
+}
+.hot-goods{
+	width: 1100px;
+	margin:0 auto;
+}
+.hot-goods > li{
+	float: left;
+	width: 200px;
+	height: 400px;
+	margin-left:10px ;
+}
+.HGimg > img{
+	width: 200px;
+	height: 200px;
+}
+.HGprice{
+	color: red;
+	font-size: 20px;
+	font-weight: bold;
+	width: 50px;
+	margin: 20px auto;
+}
+.HGname{
+	color: #666666;
+	font-size:10px ;
+	line-height: 25px;
+}
+.body{
+	position: relative;
+}
+.returnTop{
+	display: block;
+	width: 30px;
+	height: 50px;
+	background: #CCCCCC;
+	color: #666666;
+	font: 12px;
+	text-align: center;
+	line-height:25px;
+	position: fixed;
+	top: 350px;
+	right: 5px;
+}
+.returnTop:hover{
+	background: red;
+	color: #FFFFFF;
 }

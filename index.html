@@ -3,29 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
-  <link rel="stylesheet" href="css/TopBottom.css" />
+  <link rel="stylesheet" href="TopBottom.css" />
 </head>
 <body>
 	<header>
 	  <div id="action" class="action">
 	  	<span>Hi ! 欢迎来到央视网商城</span>
-	  	<a id="logout" class="logout">退出</a>   
+	  	<a id="logout" class="logout" href="index.html">退出</a>   
 	    <a id="username" class="username">用户名</a>
-	    <a id="shop-car" class="shop-car">购物车</a>
-	    <a id="login" class="login">请登录</a>
-	    <a id="regsiter" class="regsiter">免费注册</a>
+	    <a id="shop-car" class="shop-car" href="car.html">购物车</a>
+	    <a id="login" class="login"href="login.html">请登录</a>
+	    <a id="regsiter" class="regsiter" href="regsiter.html">免费注册</a>
 	  </div>
 	  <div id="searchbox" class="searchbox">
 	    <div id="logo" class="logo">
 	    	<img src="images/logo.png"/>
 	    </div>
 	    <div id="search" class="search">
-	    	<input type="text" class="search-left" placeholder="请输入要搜索的宝贝" />
-	    	<input type="button" class="search-button" value="搜索" />
+	    	<input type="text" class="search-left" placeholder="请输入要搜索的宝贝"  />
+	    	<input type="button" class="search-button" value="搜索" />	
 	    </div>
 	  </div>
 	</header>
-	<section></section>
+	<section>
+		<div class="shop-nav">
+			<ul id="shop-list" class="shop-list"></ul>
+		</div>
+		<div id="carousel" class="carousel">
+			<img src="images/TB1iODTSXXXXXc2aXXXXXXXXXXX-180-400.jpg_200x200.jpg" class="carousel-left"/>
+			<div id="carousel-center" class="carousel-center">
+				<div class="imagesList" id="imagesList">
+					<ul id="carousel-list" class="carousel-list">
+						<li><a href="#"><img src="images/QQ图片20170911214826.jpg" /></a></li>
+						<li><a href="#"><img src="images/QQ图片20170911214845.jpg" /></a></li>
+						<li><a href="#"><img src="images/QQ图片20170911220430.jpg" /></a></li>
+						<li><a href="#"><img src="images/QQ图片20170911214908.jpg" /></a></li>
+					</ul>
+				</div>
+				<ul class="circle-list" id="circle-list">
+					<li class="current">1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+				</ul>
+				<input type="button" value="<"  class="left-button" id="left-button"/>
+				<input type="button" value=">"  class="right-botton" id="right-button"/>
+			</div>
+			<img src="images/TB1UTY.KXXXXXa0XXXXXXXXXXXX-180-400.jpg_200x200.jpg" class="carousel-right"/>
+		</div>
+			<div class="body">
+				<h5>热门商品</h5>
+				<ul id="hot-goods" class="hot-goods"></ul>
+				<a href="#" class="returnTop" id="retrunTop">顶部</a>
+			</div>
+	</section>
 	<footer>
 	  <ul id="permission" class="permission">
 	    <li><a href="#">关于CCTV</a></li>
@@ -58,5 +89,13 @@
 	  	</ul>
 	  </div>
 	</footer>
+	<script src="animate.js" type="text/javascript" charset="utf-8"></script>
+	<script src="myajax.js" type="text/javascript" charset="utf-8"></script>
+	<script src="Username.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="shop-list.js" ></script>
+	<script src="search.js" type="text/javascript" charset="utf-8"></script>
+	<script src="carousel.js" type="text/javascript" charset="utf-8"></script>
+	<script src="hot-goods.js" type="text/javascript" charset="utf-8"></script>
+	<script src="returnTop.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
