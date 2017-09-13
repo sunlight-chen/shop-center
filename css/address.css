@@ -101,3 +101,9 @@ h2{
   color: #fd4040;
   background:white;
 }
+#order a{
+  color: white;
+}
+#order:hover a{
+  color: #fd4040;
+}
