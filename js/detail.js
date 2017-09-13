@@ -31,15 +31,21 @@ myajax.get("http://h6.duchengjiu.top/shop/api_goods.php",{goods_id:goods_id},fun
 });
 document.body.onclick = function (event) {
   event = event || window.event;
-  var target = event.target.srcElement;
+  var target = event.target||event.srcElement;
   if(target.id === "add-to-cart"){
-    console.log("添加到购物车");
-    myajax.post("http://h6.duchengjiu.top/shop/api_cart.php?token=",localStorage.token,{goods_id,number:1},function (error,responseText) {
+    if (!localStorage.token) {
+      alert('请先登录再购买');
+      localStorage.backurl = location.href;
+      location.href = "login.html";
+      return;
+    }
+    myajax.post("http://h6.duchengjiu.top/shop/api_cart.php?token="+localStorage.token,{goods_id,number:1},function (error,responseText) {
       var json = JSON.parse(responseText);
-      var data = json.data;
       console.log(json);
+      var data = json.data;
       if(json.code === 0){
         alert("添加到购物车成功");
+        location.href="car.html";
       }
     })
   }

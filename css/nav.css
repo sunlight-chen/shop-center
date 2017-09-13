@@ -1,24 +1,30 @@
 #navbox {
-  width: 1300px;
+  width: 100%;
   height: 50px;
   margin: 0 auto;
-  background: #fd4040;
+  background: white;
   overflow: hidden;
   margin-top: 20px;
+  border-bottom: 1px solid #f01e2d;
 }
-
+#nav{
+  margin-left: 5px;
+}
 #nav li {
   list-style: none;
-  padding: 14px 49px;
+  padding: 15px 51px;
   float: left;
 }
 
 #nav li:hover {
   background: #f01e2d;
+  border-radius: 30px;
 }
-
+#nav li:hover a{
+  color: white;
+}
 #nav li a {
   text-decoration: none;
   text-align: center;
-  color: white;
+  color: #f01e2d;
 }

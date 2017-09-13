@@ -22,9 +22,11 @@ header{
 	overflow: hidden;
 	color:#9d9d9d;
 	font-size: 13px;
+	box-shadow:0 10px 10px #ccc;
 }
 .action > span {
-	margin:15px 20px 5px;
+	line-height: 35px;
+	margin-left: 20px;
 	float: left;
 	display:block;
 }
@@ -32,19 +34,21 @@ header{
 	color: #fd4040;
 }
 .action > a{
-	margin:15px 20px 5px 0;
+	line-height: 35px;
+	margin-right:10px;
 	display: block;
 	float: right;
 	color: #9c9c9c;
+}
+.action .login{
+	color:#fd4040;
 }
 .searchbox{
 	width:100%;
 	overflow: hidden;
 }
 .searchbox > .logo > img {
-	width: 160px;
-	height: 65px;
-	margin: 20px 125px 0 55px;
+	margin: 24px 125px 0 55px;
 	float: left;
 }
 .searchbox > .search{
@@ -122,27 +126,30 @@ footer > .footer-bottom > .bottom-text > li{
 .shop-nav{
 	width: 100%;
 	height: 40px;
-	background: #fd4040;
 	margin-top: 20px;
+	border-bottom: 1px solid #fd4040;
 }
 .shop-list{
-	width: 1000px;
+	width: 810px;
 	height: 40px;
-	margin-left:30px ;
 	margin: 0 auto;
 }
 .shop-list >li{
 	float: left;
-	width: 100px;
+	width: 80px;
 	height: 40px;
 }
 .shop-list >li:hover{
 	background: #f01e2d;
+	border-radius: 30px;
+}
+.shop-list >li:hover a{
+	color: white;
 }
 .shop-list >li > a{
-	color: #FFFFFF;
-	font-size: 15px;
-	margin-left: 30px;
+	color: #fd4040;
+	font-size: 16px;
+	margin-left: 25px;
 	line-height: 40px;
 }
 .carousel{
@@ -164,6 +171,7 @@ footer > .footer-bottom > .bottom-text > li{
 	overflow: hidden;
 	float: left;
 	position: relative;
+	text-align: center;
 }
 .carousel-center > .imagesList{
 	height: 400px;
@@ -190,7 +198,7 @@ footer > .footer-bottom > .bottom-text > li{
 	height: 130px;
 	border: none;
 	outline: none;
-	background: #999999;
+	background:rgba(153,153,153,0.8);
 	z-index: 100;
 }
 .left-botton{
@@ -201,21 +209,20 @@ footer > .footer-bottom > .bottom-text > li{
 }
 .circle-list{
 	position: absolute;
-	left: 400px;
-	bottom: 5px;
+	left:50%;
+	bottom: 10px;
+	margin-left: -100px;
 	z-index: 100;
 }
 .circle-list > li{
 	float: left;
-	width: 17px;
-	height: 17px;
-	border-radius:100% ;
+	width: 30px;
+	height: 5px;
 	background: #666666;
-	margin-left:10px ;
-	text-align: center;
+	margin:0 10px ;
 }
 .circle-list  .current{
-	background: blue;
+	background: white;
 }
 h5{
 	display: block;
@@ -234,13 +241,27 @@ h5{
 }
 .hot-goods > li{
 	float: left;
-	width: 200px;
-	height: 400px;
+	width: 202px;
+	height: 390px;
 	margin-left:10px ;
+	border:1px solid #ccc;
+	box-sizing:border-box;
+	margin-bottom: 10px;
+}
+.HGimg{
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
 }
 .HGimg > img{
 	width: 200px;
 	height: 200px;
+}
+.HGimg:hover img{
+	width: 220px;
+	height: 220px;
+	margin-left: -10px;
+	margin-top: -10px;
 }
 .HGprice{
 	color: #fd4040;
@@ -263,7 +284,7 @@ h5{
 	height: 50px;
 	background: #CCCCCC;
 	color: #666666;
-	font: 12px;
+	font-size: 16px;
 	text-align: center;
 	line-height:25px;
 	position: fixed;

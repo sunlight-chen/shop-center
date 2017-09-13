@@ -70,6 +70,7 @@ label {
   cursor: pointer;
   background-color: #fd4040;
   color: white;
+  float: left;
 }
 .show-all-address:hover {
   background-color: white;
@@ -85,4 +86,18 @@ h2{
   text-align: center;
   border:2px solid #fd4040;
   line-height: 100px;
+}
+#order{
+  width: 110px;
+  height: 21px;
+  color: white;
+  text-align: center;
+  float: left;
+  margin:10px 0 10px 984px;
+  padding: 5px;
+  background: #fd4040;
+}
+#order:hover{
+  color: #fd4040;
+  background:white;
 }

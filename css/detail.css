@@ -1,16 +1,16 @@
 section{
-  width: 1300px;
-  height:496px;
+  width: 100%;
   background-color:#f7f7f7;
   margin: 0 auto;
   margin-top: 30px;
+  padding-bottom: 50px;
 }
 #detailsbox {
   width: 980px;
   height: 433px;
   border: 4px solid #fd4040;
   margin: 0 auto;
-  margin-top: 5px;
+  margin-top: 50px;
 }
 #add-to-cart {
   right: 20px;
