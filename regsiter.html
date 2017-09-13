@@ -1,36 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
-<header>
-  <div id="action" class="action">
-    <a id="login" class="login"></a>
-    <a id="regsiter" class="regsiter"></a>
-    <a id="username" class="username"></a>
-    <a id="logout" class="logout"></a>
-    <a id="shop-car" class="shop-car"></a>
-  </div>
-  <div id="searchbox" class="search">
-    <div id="logo" class="logo"></div>
-    <div id="search" class="search"></div>
-  </div>
-</header>
-<section></section>
-<footer>
-  <ul id="permission" class="permission">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
-</footer>
-</body>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>regsiter</title>
+		<link rel="icon" href="images/天猫.png">
+		<link rel="stylesheet" href="css/register.css">
+		<link rel="stylesheet" href="css/TopBottom.css">
+	</head>
+	<body>
+		<header>
+		  <div id="action" class="action">
+		    <a id="login" class="login">登录</a>
+		    <a id="regsiter" class="regsiter">注册</a>
+		    <a id="username" class="username">用户名</a>
+		    <a id="logout" class="logout">退出</a>
+		    <a id="shop-car" class="shop-car">购物车</a>
+		  </div>
+			<div id="searchbox" class="searchbox">
+				<div id="logo" class="logo">
+					<img src="images/logo.png"/>
+				</div>
+				<div id="search" class="search">
+					<input type="text" class="search-left" placeholder="请输入要搜索的宝贝" id="searchtext"/>
+					<input type="button" class="search-button" value="搜索" />
+				</div>
+			</div>
+		</header>
+		<div id="section">
+			<div class="page">
+				<div class="steps">
+						<div class="information">
+							<i>1</i>
+							<span>填写账号信息</span>
+						</div>
+				</div>
+				<main>
+					<div class="image">
+						<div class="pic"></div>
+						<div class="regsiter-name">
+							<input type="text" name="username" class="name" placeholder="请输入用户名">
+							<input type="password" name="password" class="word" placeholder="请输入密码">
+							<input type="password" name="password" class="pass" placeholder="确认密码">
+							<input type="submit" class="btn" value="注册">
+						</div>
+					</div>
+				</main>
+				<script src="js/if-login.js"></script>
+				<script src="js/myajax.js"></script>
+				<script src="js/register.js"></script>
+			</div>
+		</div>
+		<section></section>
+		<footer>
+			<ul id="permission" class="permission">
+				<li><a href="#">关于CCTV</a></li>
+				<li class="line1"></li>
+				<li><a href="#">联系CCTV</a></li>
+				<li class="line1"></li>
+				<li><a href="#">关于CCTV.com</a></li>
+				<li class="line1"></li>
+				<li><a href="#">权限声明</a></li>
+				<li class="line1"></li>
+				<li><a href="#">法律顾问</a></li>
+				<li class="line1"></li>
+				<li><a href="#">联系我们</a></li>
+				<li class="line1"></li>
+				<li><a href="#">人才招聘</a></li>
+				<li class="line1"></li>
+				<li><a href="#">资质查询</a></li>
+			</ul>
+			<div class="footer-bottom">
+				<ul class="bottom-text">
+					<li>中国中央电视台  央视网  央视网商城  版权所有</li>
+					<li>北京中金万城科技有限公司　　电话：4007-666-111</li>
+					<li>北京市海淀区学院南路12号北师大科技园孵化大厦B座3层B0308室</li>
+					<li>京ICP备14027245号-1   京公网安备110000000018号  京网文[2014]0383-083号</li>
+				</ul>
+				<ul class="bottom-img">
+					<li class="img1"></li>
+					<li class="img2"></li>
+					<li class="img3"></li>
+				</ul>
+			</div>
+		</footer>
+	</body>
 </html>
