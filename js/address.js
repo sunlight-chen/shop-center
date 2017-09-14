@@ -26,8 +26,10 @@ function showAddress() {
           var obj = data[i];
           oAddressUl.innerHTML += `
                             <li data-id="${obj.address_id}">
-                              <span class="adds">收货人</span><span class="adds">手机</span><span class="adds">地址</span><span name="delete" class="delete" data-id="${obj.address_id}">删除</span><br />
-                              <span class="adds">${obj.consignee}</span><span class="adds">${obj.mobile}</span><span class="adds">${obj.province}${obj.district}${obj.address}</span>
+                              <span class="adds">收货人：${obj.consignee}</span><span name="delete" class="delete" data-id="${obj.address_id}">删除</span><br />
+                              <span class="adds">邮编：${obj.zip_code}</span><br />
+                              <span class="adds">手机：${obj.mobile}</span><span class="address-type adds">${obj.address_name}</span><br/>
+                              <span class="adds">地址：${obj.province}${obj.district}${obj.address}</span> 
                             </li>
             `;
         }
@@ -73,7 +75,7 @@ var oOrder = document.querySelector('#order');
 oOrder.onclick = function() {
   var address_id = selected_address_id;
   if (address_id === 0) {
-    alert('请选择一个收货地址');
+    alert('请选择一个收货地址',1500);
     return;
   }
   var total_prices = localStorage.sum;
