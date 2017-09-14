@@ -69,6 +69,23 @@ oAddressUl.onclick = function(event) {
 
   }
 };
+var oOrder = document.querySelector('#order');
+oOrder.onclick = function() {
+  var address_id = selected_address_id;
+  if (address_id === 0) {
+    alert('请选择一个收货地址');
+    return;
+  }
+  var total_prices = localStorage.sum;
+  myajax.post('http://h6.duchengjiu.top/shop/api_order.php?token='+localStorage.token+'&status=add', {address_id, total_prices}, function(err, responseText){
+    var json = JSON.parse(responseText);
+    console.log(json);
+    if (json.code === 0) {
+      alert('下订单成功');
+      location.href = 'order.html';
+    }
+  });
+};
 var modal = new Modal('#add-address');
 var oAdd = document.querySelector('.add');
 oAdd.onclick = function() {
