@@ -30,12 +30,6 @@ header{
 	float: left;
 	display:block;
 }
-.action > span a{
-	color: #9c9c9c;
-}
-.action > span a:hover{
-	color: #fd4040;
-}
 .action > a:hover{
 	color: #fd4040;
 }
@@ -45,12 +39,13 @@ header{
 	display: block;
 	float: right;
 	color: #9c9c9c;
+	width: 70px;
 }
 .action .login{
 	color:#fd4040;
 }
 .searchbox{
-	width:100%;
+	width: 1300px;
 	overflow: hidden;
 }
 .searchbox > .logo > img {
@@ -85,42 +80,57 @@ header{
 	border: none;
 	outline: none;
 }
-footer{
-	width: 100%;
-	background: #AAAAAA;
-	margin:0 auto;
-	overflow: hidden;
+.searchbox > .erweima{
+	width: 100px;
+	height: 130px;
+	float: right;
+	margin: 20px 50px 0 0;
 }
-footer > .permission{
+.searchbox > .erweima >i{
+	display: block;
+	width: 90px;
+	height: 90px;
+	background: url(../images/下载.png);
+	background-size:100px 100px ;
+}
+.searchbox > .erweima >span{
+	font-size:17px ;
+	line-height: 10px;
+	margin: 15px 15px 0 15px;
+	display: inline-block;
+}
+.permission{
 	width: 650px;
 	height: 35px;
-	margin: 70px auto;
+	margin:20px auto;
+	background: #808080;
 }
-footer > .permission > li{
+.permission > li{
 	float: left;
 	margin-left:12px ;
 }
-footer > .permission > li > a{
-	color: #666666;
+.permission > li > a{
+	color: #000000;
 	font-size: 12px;
 }
-footer > .permission > .line1{
+.permission > .line1{
 	width: 1px;
 	height: 15px;
 	margin-top:5px ;
 	background: #c2bbc2;
 }
-footer > .footer-bottom{
+.footer-bottom{
 	width: 700px;
 	margin: 40px auto;
+
 }
-footer > .footer-bottom > .bottom-text{
+.footer-bottom > .bottom-text{
 	width: 540px;
 	float: left;
 	margin: auto;
 	margin-bottom: 50px;
 }
-footer > .footer-bottom > .bottom-text > li{
+.footer-bottom > .bottom-text > li{
 	text-align: center;
 	line-height: 20px;
 }
@@ -157,17 +167,22 @@ footer > .footer-bottom > .bottom-text > li{
 	line-height: 40px;
 }
 .carousel{
-	width: 100%;
+	width: 1300px;
 	height: 400px;
+	margin: 0 auto;
 }
 .carousel-left,.carousel-right{
-	width: 230px;
+	width: 240px;
 	height: 400px;
 	float: left;
-	margin: 0 20px;
+}
+.carousel-left{
+	margin-right:5px ;
+	background: url(../images/QQ图片20170914202146.jpg) no-repeat;
 }
 .carousel-right{
-	float: right;
+	background: url(../images/QQ图片20170914202126.png) no-repeat;
+	margin-left: 5px;
 }
 .carousel-center{
 	width: 800px;
@@ -298,4 +313,156 @@ h5{
 .returnTop:hover{
 	background: #fd4040;
 	color: #FFFFFF;
+}
+.footer-top{
+	width: 100%;
+	height: 600px;
+	background: #ffffff;
+}
+.footer-top > ul{
+	height: 125px;
+	width:1190px;
+	margin: 0 auto;
+	border-bottom: 1px solid #ccc;
+}
+.footer-top{
+	height:270px;
+	background: #FFFFFF;
+	border-top: 1px solid #CCCCCC;
+}
+.footer-top > ul{
+	width: 1190px;
+	height: 100px;
+	margin: 10px auto;
+	border-bottom: 1px solid #CCCCCC;
+}
+.footer-top > ul >li{
+	float: left;
+	width:195px;
+	margin: 30px 50px;
+}
+.footer-top > ul >li > i{
+	width: 45px;
+	height: 45px;
+	float: left;
+}
+.footer-top > ul >li > .img1{
+	background: url(../images/icon1.png) no-repeat -751px 0;
+}
+.footer-top > ul >li > .img2{
+	background: url(../images/icon1.png) no-repeat -873px 0;
+}
+.footer-top > ul >li > .img3{
+	background: url(../images/icon1.png) no-repeat -812px 0;
+}
+.footer-top > ul >li > .img4{
+	background: url(../images/icon1.png) no-repeat -935px 0;
+}
+.gz{
+	height: 300px;
+	width: 1190px;
+	margin: 0 auto;
+}
+.gz > ul{
+	width: 200px;
+	float: left;
+}
+.gz > ul > li{
+	width: 100px;
+	margin: 10px 10px 5px ;
+	color: red;
+	font-size:20px ;
+	position: relative;
+}
+.gz > ul > li >b{
+	width: 33px;
+	height: 33px;
+	display: block;
+	background: url(../images/icon1.png) no-repeat -751px -69px;
+}
+.gz > ul > li >img{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	display: none;
+}
+.gz > ul > .weixin >img{
+	top: 0;
+	left: 50px;
+}
+.gz > ul > .weixin:hover >img{
+	display: block;
+}
+.gz > ul > .weibo >img{
+	top: 10px;
+	left: 50px;
+}
+.gz > ul > .weibo:hover >img{
+	display: block;
+}
+.gz > ul > .yx >img{
+	top: -80px;
+	left: 50px;
+}
+.gz > ul > .yx:hover >img{
+	display: block;
+}
+.gz > ul > li >b:hover{
+	background: url(../images/icon1.png) no-repeat -751px -109px;
+}
+.gz > ul > li > i{
+	width: 33px;
+	height: 33px;
+	display: block;
+	background: url(../images/icon1.png) no-repeat -796px -69px;
+}
+.gz > ul > li >i:hover{
+	background: url(../images/icon1.png) no-repeat -796px -109px;
+}
+.gz > ul > li >s{
+		width: 33px;
+	height: 33px;
+	display: block;
+	background: url(../images/icon1.png) no-repeat -840px -69px;
+}
+.gz > ul > li >s:hover{
+	background: url(../images/icon1.png) no-repeat -840px -109px;
+}
+.gz > dl{
+	width: 150px;
+	height: 200px;
+	float: left;
+	border-left: 1px solid #ccc;
+	color: #666666;
+}
+.gz > dl >dt{
+	font-size: 20px;
+	margin:15px 20px;
+}
+.gz > dl >dd{
+	margin: 20px;
+	font-size: 10px;
+}
+.gz-right{
+	width: 200px;
+	height: 200px;
+	float: left;
+	margin-left: 20px;
+}
+.gz-right > img{
+	width: 150px;
+	height: 150px;
+	display: block;
+}
+.gz-right > p{
+	color: #666666;
+	font-size:10px ;
+	margin: 30px;
+	display: block;
+}
+#footer-body{
+		background: #808080;
+		width: 100%;
+		height: 200px;
+		overflow: hidden;
 }
