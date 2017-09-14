@@ -1,0 +1,295 @@
+*{
+    padding: 0;
+    border: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #666666;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+header{
+    width: 100%;
+    margin:0 auto;
+}
+.action{
+    height: 35px;
+    background: #f2f2f2;
+    overflow: hidden;
+    color:#9d9d9d;
+    font-size: 13px;
+    box-shadow:0 10px 10px #ccc;
+}
+.action > span {
+    line-height: 35px;
+    margin-left: 20px;
+    float: left;
+    display:block;
+}
+.action > a:hover{
+    color: #fd4040;
+}
+.action > a{
+    line-height: 35px;
+    margin-right:10px;
+    display: block;
+    float: right;
+    color: #9c9c9c;
+    width: 70px;
+}
+.action .login{
+    color:#fd4040;
+}
+.searchbox{
+    width: 1300px;
+    overflow: hidden;
+}
+.searchbox > .logo > img {
+    margin: 24px 125px 0 55px;
+    float: left;
+}
+.searchbox > .search{
+    width: 613px;
+    height: 40px;
+    margin-top: 40px;
+    float: left;
+    border: 2px solid #fd4040;
+}
+.searchbox > .search > .search-left{
+    width:480px ;
+    height: 40px;
+    float: left;
+    border: none;
+    color: #999999;
+    font-size: 15px;
+    outline: none;
+}
+.searchbox > .search > .search-button{
+    width:135px;
+    height:40px;
+    background: #fd4040;
+    float: left;
+    color: #FFFFFF;
+    font-size: 19px;
+    margin-left: -2px;
+    border: none;
+    outline: none;
+}
+.searchbox > .erweima{
+    width: 100px;
+    height: 130px;
+    float: right;
+    margin: 20px 50px 0 0;
+}
+.searchbox > .erweima >i{
+    display: block;
+    width: 90px;
+    height: 90px;
+    background: url(../images/下载.png);
+    background-size:100px 100px ;
+}
+.searchbox > .erweima >span{
+    font-size:17px ;
+    line-height: 10px;
+    margin: 15px 15px 0 15px;
+    display: inline-block;
+}
+.footer-top{
+    width: 100%;
+    height: 600px;
+    background: #ffffff;
+}
+.footer-top > ul{
+    height: 125px;
+    width:1190px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ccc;
+}
+.footer-top{
+    height:270px;
+    background: #FFFFFF;
+    border-top: 1px solid #CCCCCC;
+}
+.footer-top > ul{
+    height: 125px;
+    width:1190px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ccc;
+}
+.footer-top > ul >li{
+    float: left;
+    width:195px;
+    margin: 30px 50px;
+}
+.footer-top > ul >li > i{
+    width: 45px;
+    height: 45px;
+    float: left;
+}
+.footer-top > ul >li > .img1{
+    background: url(../images/icon1.png) no-repeat -751px 0;
+}
+.footer-top > ul >li > .img2{
+    background: url(../images/icon1.png) no-repeat -873px 0;
+}
+.footer-top > ul >li > .img3{
+    background: url(../images/icon1.png) no-repeat -812px 0;
+}
+.footer-top > ul >li > .img4{
+    background: url(../images/icon1.png) no-repeat -935px 0;
+}
+.permission{
+    width: 650px;
+    height: 35px;
+    margin:20px auto;
+    background: #808080;
+}
+.gz{
+    height: 300px;
+    width: 1190px;
+    margin: 0 auto;
+}
+.gz > ul{
+    width: 200px;
+    float: left;
+}
+.gz > ul > li{
+    width: 100px;
+    margin: 10px 10px 5px ;
+    color: red;
+    font-size:20px ;
+    position: relative;
+}
+.gz > ul > li >b{
+    width: 33px;
+    height: 33px;
+    display: block;
+    background: url(../images/icon1.png) no-repeat -751px -69px;
+}
+.gz > ul > li >img{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    display: none;
+}
+.gz > ul > .weixin >img{
+    top: 0;
+    left: 50px;
+}
+.gz > ul > .weixin:hover >img{
+    display: block;
+}
+.gz > ul > .weibo >img{
+    top: 10px;
+    left: 50px;
+}
+.gz > ul > .weibo:hover >img{
+    display: block;
+}
+.gz > ul > .yx >img{
+    top: -80px;
+    left: 50px;
+}
+.gz > ul > .yx:hover >img{
+    display: block;
+}
+.gz > ul > li >b:hover{
+    background: url(../images/icon1.png) no-repeat -751px -109px;
+}
+.gz > ul > li > i{
+    width: 33px;
+    height: 33px;
+    display: block;
+    background: url(../images/icon1.png) no-repeat -796px -69px;
+}
+.gz > ul > li >i:hover{
+    background: url(../images/icon1.png) no-repeat -796px -109px;
+}
+.gz > ul > li >s{
+    width: 33px;
+    height: 33px;
+    display: block;
+    background: url(../images/icon1.png) no-repeat -840px -69px;
+}
+.gz > ul > li >s:hover{
+    background: url(../images/icon1.png) no-repeat -840px -109px;
+}
+.gz > dl{
+    width: 150px;
+    height: 200px;
+    float: left;
+    border-left: 1px solid #ccc;
+    color: #666666;
+}
+.gz > dl >dt{
+    font-size: 20px;
+    margin:15px 20px;
+}
+.gz > dl >dd{
+    margin: 20px;
+    font-size: 10px;
+}
+.gz-right{
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-left: 20px;
+}
+.gz-right > img{
+    width: 150px;
+    height: 150px;
+    display: block;
+}
+.gz-right > p{
+    color: #666666;
+    font-size:10px ;
+    margin: 30px;
+    display: block;
+}
+#footer-body{
+    margin-top: 100px;
+    background: #808080;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+permission{
+    width: 650px;
+    height: 35px;
+    margin:20px auto;
+    background: #808080;
+}
+.permission > li{
+    float: left;
+    margin-left:12px ;
+}
+.permission > li > a{
+    color: #000000;
+    font-size: 12px;
+}
+.permission > .line1{
+    width: 1px;
+    height: 15px;
+    margin-top:5px ;
+    background: #c2bbc2;
+}
+.footer-bottom{
+    width: 700px;
+    margin: 40px auto;
+
+}
+.footer-bottom > .bottom-text{
+    width: 540px;
+    float: left;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.footer-bottom > .bottom-text > li{
+    text-align: center;
+    line-height: 20px;
+}
