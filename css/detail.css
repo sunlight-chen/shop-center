@@ -86,16 +86,21 @@ section{
     color:#ffffff;
     background-color: #fd4040;
     border-radius:3px;
+    text-align: center;
 }
 .div-right .button input{
-    margin-left:400px;
-    margin:90px 0 0 40px;
-    background-color:#fd4040 ;
+    margin:90px 0 0 302px;
     font-size: 20px;
-    color:#ffffff;
+    color:#fd4040;
     border:none;
     width:200px;
+    height: 40px;
     outline:0;
+    background: #f7f7f7;
+}
+.div-right .button input:hover{
+    background-color:#fd4040 ;
+    color:#ffffff;
     border-radius:3px;
 }
 .goods_img{

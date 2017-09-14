@@ -7,3 +7,7 @@ oSearch.onkeyup= function (event) {
     location.href="search.html?search_text="+oSearch.value;
   }
 };
+var oSearchBtn = document.querySelector(".search-button");
+oSearchBtn.onclick = function (event) {
+  location.href="search.html?search_text="+oSearch.value;
+};

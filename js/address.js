@@ -43,33 +43,32 @@ oAddressUl.onclick = function(event) {
   var target = event.target || event.srcElement;
   console.log(target.nodeName);
   if (target.className === 'delete') {
-    if (!confirm('确认要删除收货地址吗？')) {
-      return;
+      confirm('确认要删除吗？', function(){
+        var address_id = target.dataset.id;
+        console.log(address_id);
+        myajax.get('http://h6.duchengjiu.top/shop/api_useraddress.php',
+            {status: 'delete', address_id, token: localStorage.token}, function(error, responseText){
+              var json = JSON.parse(responseText);
+              if (json.code === 0) {
+                target.parentNode.parentNode.removeChild(target.parentNode);
+              }
+            })
+      }, function(){
+        var oAddressLis = oAddressUl.querySelectorAll('li');
+        for (var i = 0; i < oAddressLis.length; i++) {
+          oAddressLis[i].classList.remove('selected');
+        }
+        if (target.nodeName === 'LI') {
+          //点击LI元素选择一个收货地址
+          selected_address_id = parseInt(target.dataset.id);
+          target.classList.add('selected');
+        } else if (target.nodeName === 'SPAN'){
+          selected_address_id = parseInt(target.parentNode.dataset.id);
+          target.parentNode.classList.add('selected');
+        }
+        return;
+      });
     }
-    var address_id = target.dataset.id;
-    console.log(address_id);
-    myajax.get('http://h6.duchengjiu.top/shop/api_useraddress.php',
-        {status: 'delete', address_id, token: localStorage.token}, function(error, responseText){
-          var json = JSON.parse(responseText);
-          if (json.code === 0) {
-            target.parentNode.parentNode.removeChild(target.parentNode);
-          }
-        })
-  } else {
-    var oAddressLis = oAddressUl.querySelectorAll('li');
-    for (var i = 0; i < oAddressLis.length; i++) {
-      oAddressLis[i].classList.remove('selected');
-    }
-    if (target.nodeName === 'LI') {
-      //点击LI元素选择一个收货地址
-      selected_address_id = parseInt(target.dataset.id);
-      target.classList.add('selected');
-    } else if (target.nodeName === 'SPAN'){
-      selected_address_id = parseInt(target.parentNode.dataset.id);
-      target.parentNode.classList.add('selected');
-    }
-
-  }
 };
 var oOrder = document.querySelector('#order');
 oOrder.onclick = function() {
