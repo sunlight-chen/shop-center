@@ -30,6 +30,12 @@ header{
 	float: left;
 	display:block;
 }
+.action > span a{
+	color: #9c9c9c;
+}
+.action > span a:hover{
+	color: #fd4040;
+}
 .action > a:hover{
 	color: #fd4040;
 }

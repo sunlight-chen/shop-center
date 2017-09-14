@@ -2,18 +2,24 @@ section{
   width:100%;
   height:510px;
   margin: 0 auto;
-  background-color:#f7f7f7;
+  margin-top:35px;
   border-top:1px solid #dbdbdb;
+  background:url(../images/ifashions.jpg)  no-repeat -592px -48px;
+  /*background-size:100% 100%;*/
+  border-top:3px solid #DD5517;
+  border-bottom:3px solid #DD5517;
 }
 #div0{
   width: 980px;
   height: 378px;
-  border:4px solid #cecccc;
+  /*border:4px solid #cecccc;*/
   margin:0 auto;
   margin-top:66px;
 }
 #div0 #img{
   float:left;
+  width: 550px;
+  height: 400px;
 }
 #div0 #text,#div0 #password{
   width:290px;

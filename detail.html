@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <title>商品详情页</title>
   <link rel="stylesheet" href="css/TopBottom.css">
-  <link rel="stylesheet" href="css/detail.css">
   <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/detail.css">
+  <link rel="stylesheet" href="css/alert.css">
 </head>
 <body>
 <header>
   <div id="action" class="action">
-    <span>Hi ! 欢迎来到央视网商城</span>
+    <span><a href="index.html">! 欢迎来到央视网商城</a></span>
     <a id="logout" class="logout" href="javascript:localStorage.clear(); location.reload();">退出</a>
     <a id="username" class="username">用户名</a>
     <a id="shop-car" class="shop-car" href="car.html">购物车</a>
@@ -29,17 +30,18 @@
     </div>
 </header>
 <section>
-  <div id="navbox">
-    <ul id="nav"></ul>
+  <div class="goods_img"><img  src="images/2.jpg"/></div>
+  <div id="div0">
   </div>
-  <div id="detailsbox">
-  </div>
+  <script src="js/myajax.js" charset="utf-8"></script>
 </section>
-<script src="js/myajax.js"></script>
 <script src="js/if-login.js"></script>
 <script src="js/searchkey.js"></script>
-<script src="js/shop-list.js"></script>
+<script src="js/alert.js"></script>
+<script src="js/magnifier.js"></script>
 <script src="js/detail.js"></script>
+
+
 <footer>
   <ul id="permission" class="permission">
     <li><a href="#">关于CCTV</a></li>

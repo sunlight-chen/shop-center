@@ -6,10 +6,10 @@ window.onscroll = function(){
 	}else{
 			oReturnTop.style.display = "none"
 	}
-}
+};
 oReturnTop.onclick = function(){
 	scrollAnimate(0, 1000);
-}
+};
 function scrollAnimate(target , timer){
 	var interval = 20;
   var frame = 0;

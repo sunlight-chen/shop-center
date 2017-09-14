@@ -17,7 +17,7 @@ myajax.get("http://h6.duchengjiu.top/shop/api_order.php",{token:localStorage.tok
 					<img src = "${goods.goods_thumb}"/>
 					<span>${goods.goods_name}</span>
 					<b>x ${goods.goods_number}</b>
-					<p><a href ="#">售后申请</a><p>
+					<p><a href ="#">售后申请</a></p>
 					<div class="username">${obj.consignee}</div>
 					<div class = "price"><p>总额 ¥ ${goods.goods_price}</p><span>在线支付</span></div>
 					<div class = "state"><p>已完成</p><span><a href="#">订单详情</a></span></div>
@@ -25,7 +25,7 @@ myajax.get("http://h6.duchengjiu.top/shop/api_order.php",{token:localStorage.tok
 			`
         }
 		order.innerHTML += `<li>
-			<span class = "cancel-order" data-id="$\{obj.order_id}">取消订单</span>
+			<span class = "cancel-order" data-id="${obj.order_id}">取消订单</span>
 			<div class = "order-goods">
 				${goodsHtml}
 			</div>
@@ -40,7 +40,7 @@ order.onclick = function(event) {
         if (!confirm('确认要取消订单吗?')) {
             return;
         }
-        var tr = target.parentNode.parentNode;
+        var tr = target.parentNode;
         tr.parentNode.removeChild(tr);
         var order_id = target.dataset.id;
         myajax.post('http://h6.duchengjiu.top/shop/api_order.php?token='+localStorage.token+'&status=cancel', {order_id}, function(err, responseText) {
