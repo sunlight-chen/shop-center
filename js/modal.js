@@ -92,7 +92,7 @@ Modal.prototype.bindEvent = function() {
   this.oModal.onclick = (event) => {
     event = event || window.event;
     var target = event.target || event.srcElement;
-    if (target.className === 'close' || target.className === 'modal') {
+    if (target.className === 'close' || target.className === 'modal'||target.className === 'add') {
       this.oModal.style.display = 'none';
     }
   }
@@ -100,4 +100,4 @@ Modal.prototype.bindEvent = function() {
   this.oBtn.onclick = () => {
     this.oModal.style.display = "block";
   }
-}
+};

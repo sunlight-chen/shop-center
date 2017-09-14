@@ -1,36 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
-<header>
-  <div id="action" class="action">
-    <a id="login" class="login"></a>
-    <a id="regsiter" class="regsiter"></a>
-    <a id="username" class="username"></a>
-    <a id="logout" class="logout"></a>
-    <a id="shop-car" class="shop-car"></a>
-  </div>
-  <div id="searchbox" class="search">
-    <div id="logo" class="logo"></div>
-    <div id="search" class="search"></div>
-  </div>
-</header>
-<section></section>
-<footer>
-  <ul id="permission" class="permission">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
-</footer>
-</body>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/order.css"/>
+	</head>
+	<body>
+		<div id="myOrder" class="myOrder">
+			<span ><a href="#">我的订单	</a></span>
+		</div>
+		<div id="body" class="body">
+			<nav>
+					<ul class="body-left">
+						<li><a href="#">全部订单</a></li>
+						<li><a href="#">代付款</a> </li>
+						<li><a href="#">待收货</a></li>
+						<li><a href="#">待收货</a></li>
+					</ul>
+					<ul class="body-center">
+						<li><a href="#">我的常购商品</a></li>
+						<li><a href="#">好货·清仓</a></li>
+						<li><a href="#">订单回收站</a></li>
+					</ul>
+					<div class="search" id="search">
+						<input type="text"  placeholder="商品名称/商品编号/订单编号" />
+						<button>搜索</button>
+						<button>高级</button>
+					</div>
+				</nav>
+			<div id="report" class="report">
+				<span><a href="#">近三个月的订单</a></span>
+				<b><a href="#">订单详情</a></b>
+				<ul>
+					<li><a href="#">收货人</a></li>
+					<li><a href="#">金额</a></li>
+					<li><a href="#">全部状态</a></li>
+					<li><a href="#">操作</a></li>
+				</ul>
+			</div>
+			<ul class="order" id="order"></ul>
+		</div>
+		<script src="js/myajax.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/order.js"></script>
+	</body>
 </html>

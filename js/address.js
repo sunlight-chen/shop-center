@@ -77,7 +77,6 @@ oAdd.onclick = function() {
     var json = JSON.parse(responseText);
     console.log(json);
     if (json.code === 0) {
-      modal.hide();
       showAddress();
     }
   });
