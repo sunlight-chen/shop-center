@@ -54,20 +54,20 @@ oAddressUl.onclick = function(event) {
               }
             })
       }, function(){
-        var oAddressLis = oAddressUl.querySelectorAll('li');
-        for (var i = 0; i < oAddressLis.length; i++) {
-          oAddressLis[i].classList.remove('selected');
-        }
-        if (target.nodeName === 'LI') {
-          //点击LI元素选择一个收货地址
-          selected_address_id = parseInt(target.dataset.id);
-          target.classList.add('selected');
-        } else if (target.nodeName === 'SPAN'){
-          selected_address_id = parseInt(target.parentNode.dataset.id);
-          target.parentNode.classList.add('selected');
-        }
         return;
       });
+  }
+      var oAddressLis = oAddressUl.querySelectorAll('li');
+    for (var i = 0; i < oAddressLis.length; i++) {
+      oAddressLis[i].classList.remove('selected');
+    }
+    if (target.nodeName === 'LI') {
+      //点击LI元素选择一个收货地址
+      selected_address_id = parseInt(target.dataset.id);
+      target.classList.add('selected');
+    } else if (target.nodeName === 'SPAN') {
+      selected_address_id = parseInt(target.parentNode.dataset.id);
+      target.parentNode.classList.add('selected');
     }
 };
 var oOrder = document.querySelector('#order');

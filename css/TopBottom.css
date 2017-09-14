@@ -35,11 +35,11 @@ header{
 }
 .action > a{
 	line-height: 35px;
-	margin-right:10px;
+	margin-right:20px;
 	display: block;
 	float: right;
 	color: #9c9c9c;
-	width: 70px;
+	text-align: center;
 }
 .action .login{
 	color:#fd4040;
@@ -338,8 +338,8 @@ h5{
 }
 .footer-top > ul >li{
 	float: left;
-	width:195px;
-	margin: 30px 50px;
+	width:200px;
+	margin: 30px 46px;
 }
 .footer-top > ul >li > i{
 	width: 45px;
