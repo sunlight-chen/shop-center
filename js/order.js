@@ -15,22 +15,21 @@ myajax.get("http://h6.duchengjiu.top/shop/api_order.php",{token:localStorage.tok
 
             goodsHtml += `
 					<img src = "${goods.goods_thumb}"/>
-					<span>${goods.goods_name}</span>
+					<span class="Goodsname">${goods.goods_name}</span>
 					<b>x ${goods.goods_number}</b>
 					<p><a href ="#">售后申请</a></p>
 					<div class="username">${obj.consignee}</div>
 					<div class = "price"><p>总额 ¥ ${goods.goods_price}</p><span>在线支付</span></div>
 					<div class = "state"><p>已完成</p><span><a href="#">订单详情</a></span></div>
 					<div class = "other"><span>评价|晒单</span><button><a href = "goods.html">购买其他</a></button></div>
-			`
+			`;
         }
 		order.innerHTML += `<li>
-			<span class = "cancel-order" data-id="${obj.order_id}">取消订单</span>
 			<div class = "order-goods">
 				${goodsHtml}
+				<span class = "cancel-order" data-id="${obj.order_id}">取消订单</span>
 			</div>
-		</li>`
-        console.log(obj.order_id);
+		</li>`;
  }	
 });
 order.onclick = function(event) {
