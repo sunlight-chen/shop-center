@@ -71,39 +71,39 @@
                 getSum();
               }
             })
-              alert('删除成功');
+              alert('删除成功',1000);
             }, function () {
               return;
             });
           }
         });
-
-	
 	    var oClearCart = document.querySelector('#clear-cart');
 	    oClearCart.onclick = () => {
-	      if (!confirm('确认要清空整个购物车吗？')) {
-	        return;
-	      }
-	      var oGoodsIds = document.querySelectorAll('td[name=goods_id]');
-	      for (var i = 0; i < oGoodsIds.length; i++) {
-	        var td = oGoodsIds[i];
-	        var goods_id = parseInt(td.innerText);
-	        var number = 0;
-	        (function(td){
-	          myajax.post('http://h6.duchengjiu.top/shop/api_cart.php?token='+localStorage.token,
-	          {goods_id, number},
-	          (err, responseText) => {
-	            var json = JSON.parse(responseText);
-	            console.log(json);
-	            if (json.code === 0) {
-	              var tr = td.parentNode;
-	              tr.parentNode.removeChild(tr);
-	              getSum();
-	            }
-	          });
-	        })(td);
-	      }
-	    }
+            confirm('确认要删除吗？', function(){
+            	var oGoodsIds = document.querySelectorAll('td[name=goods_id]');
+              for (var i = 0; i < oGoodsIds.length; i++) {
+                var td = oGoodsIds[i];
+                var goods_id = parseInt(td.innerText);
+                var number = 0;
+                (function(td){
+                  myajax.post('http://h6.duchengjiu.top/shop/api_cart.php?token='+localStorage.token,
+                      {goods_id, number},
+                      function(err, responseText) {
+                        var json = JSON.parse(responseText);
+                        console.log(json);
+                        if (json.code === 0) {
+                          var tr = td.parentNode;
+                          tr.parentNode.removeChild(tr);
+                          getSum();
+                        }
+                      });
+                })(td);
+              }
+             alert('清空成功',1000);
+            }, function(){
+            	return;
+            });
+          }
 	    function getSum() {
 	      var oSums = document.querySelectorAll('td[name=sum]');
 	      var sum = 0;
