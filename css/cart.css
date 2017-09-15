@@ -3,17 +3,23 @@
 	padding: 0;
 }
 main{
-	width:1250px;
+	width:1350px;
+	height: 500px;
 	margin: 0 auto;
 	margin-top: 50px;
+	
 }
 #list td {
   height: 50px;
-  border: 1px solid orange;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 1px solid #E4E4E4;
   padding: 10px;
   vertical-align: middle;
-  border: 0;
-  background: #E4E4E4;
+  background: #F7F7F7;
+  overflow: hidden;
+  position: relative;
 }
 #list {
   height: 50px;
@@ -24,24 +30,50 @@ main{
 #list img {
   border-radius: 50%;
   width: 100px;
+  height: 100px;
 }
-#subtotal{
-  width:1230px;
+.checkout{
+  width:1330px;
   height: 30px;
-  margin-top: 100px;
+  margin: 0 auto;
   font-size: 15px;
   padding: 10px;
   color: #3E3E3E;
   position: relative;
+  background: #F7F7F7;
 }
-#subtotal a{
-	color: #fd4040;
+.checkout p{
+	font-size: 15px;
+	color: #3E3E3E;
+	font-weight: 500;
+	position: absolute;
+	top: 10px;
+	right:194px;
+}
+.checkout a{
+	width: 90px;
+	height: 50px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 16px;
+	color: #FFFFFF;
+	background: #FF4700;
+	position: absolute;
+	top:0;
+	right:0;
+	text-decoration: none;
+}
+.checkout a:hover{
+	background: #FFA500;
 }
 #sum{
-	font-size: 16px;
+	font-size: 20px;
 	font-family: "\5FAE\8F6F\96C5\9ED1","\534E\6587\7EC6\9ED1","\9ED1\4F53",arial;
 	font-weight: 700;
-	color: #fd4040;
+	color: #FF4700;
+	position: absolute;
+	top: 10px;
+	right: 103px;
 }
 #clear-cart{
 	width: 80px;
@@ -49,22 +81,59 @@ main{
 	line-height: 30px;
 	font-size: 15px;
 	color: white;
-	background: #fd4040;
-	border: none;
-	outline: none;
+	background: #FF0000;
+	border: 0;
 	cursor: pointer;
 	position: absolute;
-	top: 10px;
-	right: 10px;
+	top: 15px;
+	left: 10px;
+}
+#clear-cart:hover{
+	background: #FF4700;
 }
 .delete input{
-	width: 40px;
+	width: 50px;
 	height: 40px;
-	background: #fd4040;
+	background: #FF0000;
 	color: white;
 	font-size: 15px;
-	line-height: 40px;
+	text-align: center;
 	padding: 5px;
+	border: 0;
+	cursor: pointer;
+}
+.delete input:hover{
+	background: orange;
+}
+.selected input{
+	width: 50px;
+	height: 20px;
+	border: 1px solid #E4E4E4;
+	line-height: 20px;
+	text-align: center;
+}
+.selected button{
+	width: 30px;
+	height: 22px;
+	border: 1px solid #E4E4E4;
+	text-align: center;
+	background: #F7F7F7;
+	cursor: pointer;
+}
+.same{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	background:rgba(0,0,0,0.3);
+	color: white;
+	line-height: 100px;
+	border-radius: 50%;
+	display: none;
+	cursor: pointer;
+	left:45px;
+}
+.picture:hover .same{
+	display: block ;
 }
 /*#concent{
 	width: 1190px;

@@ -77,7 +77,6 @@ html,body{
 .report{
 	height: 35px;
 	margin:12px auto 0;
-	border-bottom: 1px solid #e5e5e5;
 }
 .report > span , .report > b , .report > ul > li{
 	float: left;
@@ -102,7 +101,7 @@ html,body{
 	width: 120px;	
 }
 .order{
-	width:1100px ;
+	width:1000px;
 	margin:0 auto;
 	height:100%;
 }
@@ -110,6 +109,7 @@ html,body{
 	font:arial;
 	color: #666666;
 	text-align:center;
+	margin-bottom: 20px;
 }
 .order > img{
 	width: 300px;
@@ -122,73 +122,62 @@ html,body{
 	font-size: 12px;
 	text-align: center;
 }
-.order > li{
-	height: 100px;
-	border-bottom: 1px solid #e5e5e5;
+.cancel-order{
+	color:red;
+	width:70px;
+	height:20px;
+	float:left;
+	margin-top:20px;
 }
-.order-goods > img ,.order-goods > .Goodsname , .order-goods > b ,.order-goods > p,.order-goods > p >a{
-	width: 80px;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	height: 80px;
-	float: left;
-	margin:10px 15px 0  15px;
-	color: #999;
-	line-height: 70px;
+.cancel-order:hover{
+    background:red;
+	color:#fff;
 }
-.order-goods > b {
-	color: red;
+.order-goods > img{
+	width:90px;
+	height:90px;
+	float:left;
+	margin-top:20px;
+	display:block;
 }
-.order-goods >div{
-	width: 110px;
-	height: 100px;
-	float: left;
+.order-goods > span{
+	width:90px;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	height:40px;
+	float:left;
+	margin:50px 10px 0 0;
+	display:block;
 }
-.order-goods > .username{
-	line-height: 100px;
+.order-goods > p {
+	width:130px;
+	height:90px;
+	float:left;
+	margin:50px 10px 0 0;
+	display:block;
 }
-.order-goods > .price > p{
-	height: 30px;
-	color: #666666;
-	font-size: 12px;
-	width:100px ;
-	display: block;
-	border-bottom:1px  solid #ccc;
-	line-height: 30px;
+.order-goods >b {
+	width:130px;
+	height:90px;
+	float:left;
+	margin:50px 20px 0 0;
+	display:block;
 }
-.order-goods > .price > span{
-	font-size: 15px;
-	height: 20px;
-	margin-top: 0;
+.order-goods > div {
+	float:left;
+	width:150px;
+	height:90px;
+	margin:20px 10px 0;
+	text-align:center;
+	line-height:90px;
 }
-.other > span{
-	height: 20px;
-	display: block;
-	margin-top:20px ;
+.order > li {
+	width:1100px;
+	height:150px;
+	float:left;
 }
-.other > button{
-	width:85px;
-	height: 35px;
-	display: block;
-	border: 1px;
-	margin: 10px auto;
+.order{
+	height:100%;
 }
-.order-goods > .cancel-order {
-	margin-top:10px ;
-	float: right;
-	color: #666;
-	font-size:12px ;
-	cursor: pointer;
-	width: 60px;
-	height: 20px;
-}
-.order-goods > .cancel-order:hover {
-	background-color: red;
-	border-radius: 5px;
-	color: #ffffff;
-}
-
-
-
 
