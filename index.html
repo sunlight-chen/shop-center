@@ -5,17 +5,21 @@
   <title>Title</title>
   <link rel="stylesheet" href="css/TopBottom.css" />
   <link rel="stylesheet" href="css/confirm.css" />
+  <link rel="stylesheet" href="css/alert.css" />
 </head>
 <body>
 	<header>
 	  <div id="action" class="action">
 	  	<span>Hi ! 欢迎来到爱奇艺商城</span>
+	  	<div class="loginBox">
+	  		
+	  	</div>
 			<a id="logout" class="logout" href="javascript:localStorage.clear(); location.reload();">退出</a>
 			<a id="username" class="username" href="#">用户名</a>
-			<a id="shop-car" class="shop-car" href="car.html">购物车</a>
+			<a id="shop-car" class="shop-car" >购物车</a>
 			<a id="login" class="login" href="login.html">请登录</a>
 			<a id="regsiter" class="regsiter" href="regsiter.html">免费注册</a>
-			<a href="order.html">查看订单</a>
+			<a class="check-order" id="order">查看订单</a>
 			<a href="index.html">返回首页</a>
 	  </div>
 	  <div id="searchbox" class="searchbox">
@@ -60,7 +64,14 @@
 			<div class="body">
 				<h5>热门商品</h5>
 				<ul id="hot-goods" class="hot-goods"></ul>
-				<a href="#" class="returnTop" id="retrunTop">顶部</a>
+				<ul class="left-nav" id="left-nav">
+					<li class="leftnav1"><a href="#"></a></li>
+					<li class="leftnav2"><a href="#"></a><span>购物车</span></li>
+					<li class="leftnav3"><a href="#"></a></li>
+					<li class="leftnav4"><a href="#"></a></li>
+					<li class="leftnav5"><a href="#"></a></li>
+					<li class="leftnav6"><a href="#" class="returnTop" id="retrunTop">Top</a></li>
+				</ul>
 			</div>
 	</section>
 	<footer>
@@ -155,5 +166,10 @@
 	<script src="js/carousel.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/hot-goods.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/returnTop.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/animation.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/order-if.js"></script>
+	<script src="js/onTop.js"></script>
+	<script src="js/alert.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/turn.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

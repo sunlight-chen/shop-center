@@ -89,7 +89,7 @@ section{
     text-align: center;
 }
 .div-right .button input{
-    margin:90px 0 0 302px;
+    margin-left: 80px;
     font-size: 20px;
     color:#fd4040;
     border:none;
@@ -98,13 +98,41 @@ section{
     outline:0;
     background: #f7f7f7;
 }
+.sum,.button{
+    float: left;
+    margin-top: 90px;
+}
+.div-right .sum input{
+    width: 100px;
+    height: 38px;
+    outline: none;
+    border:1px solid #fd4040;
+    text-align: center;
+}
+#lbtn{
+    margin-left: 40px;
+    border-radius: 20px 0 0 20px;
+}
+#rbtn{
+    border-radius: 0 20px 20px 0;
+}
+.div-right button{
+    width: 40px;
+    height: 40px;
+    border:none;
+    background: #fd4040;
+    color: white;
+    outline: none;
+}
+.div-right button:hover{
+    background: #f01e2d;
+}
 .div-right .button input:hover{
     background-color:#fd4040 ;
     color:#ffffff;
     border-radius:3px;
 }
 .goods_img{
-
     width: 1100px;
     height:80px;
     margin:0 auto;

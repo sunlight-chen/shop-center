@@ -6,6 +6,8 @@
 		<link rel="stylesheet" type="text/css" href="css/order.css"/>
 		<link rel ="stylesheet" href="css/TopBottom.css">
 		<link rel="stylesheet" href="css/nav.css">
+		<link rel="stylesheet" href="css/confirm.css">
+		<link rel="stylesheet" href="css/alert.css">
 	</head>
 	<body>
 	<header>
@@ -30,42 +32,19 @@
 			<div class="erweima"><i></i><span>扫码关注</span></div>
 		</div>
 	</header>
-	<script src="js/if-login.js"></script>
-	<script src="js/searchkey.js"></script>
-		<div id="myOrder" class="myOrder">
-			<span ><a href="#">我的订单	</a></span>
-		</div>
-		<div id="bodyer" class="bodyer">
-			<nav>
-					<ul class="body-left">
-						<li><a href="#">全部订单</a></li>
-						<li><a href="#">代付款</a> </li>
-						<li><a href="#">待收货</a></li>
-						<li><a href="#">待收货</a></li>
-					</ul>
-					<ul class="body-center">
-						<li><a href="#">我的常购商品</a></li>
-						<li><a href="#">好货·清仓</a></li>
-						<li><a href="#">订单回收站</a></li>
-					</ul>
-					<div class="search1" id="search1">
-						<input type="text"  placeholder="商品名称/商品编号/订单编号" />
-						<button>搜索</button>
-						<button>高级</button>
-					</div>
-				</nav>
-			<div id="report" class="report">
-				<span><a href="#">近三个月的订单</a></span>
-				<b><a href="#">订单详情</a></b>
-				<ul>
-					<li><a href="#">收货人</a></li>
-					<li><a href="#">金额</a></li>
-					<li><a href="#">全部状态</a></li>
-					<li><a href="#">操作</a></li>
+			<script src="js/if-login.js"></script>
+			<script src="js/searchkey.js"></script>
+			<form class="order-body">
+				<ul class="order-nav">
+					<li class="order-number">订单编号</li>
+					<li class="order-detail">订单详情</li>
+					<li class="payee">收款人</li>
+					<li class="order-pirce">订单金额</li>
+					<li class="order-state">订单状态</li>
+					<li class="order-operate">操作</li>
 				</ul>
-			</div>
-			<ul class="order" id="order"></ul>
-		</div>
+				<ul class="shop-order-list" id="shop-order-list"></ul>
+			</form>
 		<footer>
 		<div class="footer-top">
 			<ul>
@@ -157,5 +136,7 @@
 		<script src="js/searchkey.js"></script>
 		<script src="js/if-login.js"></script>
 		<script src="js/order.js"></script>
+		<script src="js/confirm.js"></script>
+		<script src="js/alert.js"></script>
 	</body>
 </html>

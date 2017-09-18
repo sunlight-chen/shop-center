@@ -17,12 +17,15 @@ header{
 	margin:0 auto;
 }
 .action{
+	width: 100%;
 	height: 35px;
 	background: #f2f2f2;
 	overflow: hidden;
 	color:#9d9d9d;
 	font-size: 13px;
 	box-shadow:0 10px 10px #ccc;
+	position: relative;
+	z-index: 2;
 }
 .action > span {
 	line-height: 35px;
@@ -35,15 +38,19 @@ header{
 }
 .action > a{
 	line-height: 35px;
-	margin-right:20px;
+	margin-right:50px;
 	display: block;
 	float: right;
 	color: #9c9c9c;
 	text-align: center;
 }
+.check-order{
+	cursor: pointer;
+}
 .action .login{
 	color:#fd4040;
 }
+
 .searchbox{
 	width: 1300px;
 	overflow: hidden;
@@ -143,24 +150,24 @@ header{
 	margin-top: 20px;
 	border-bottom: 1px solid #fd4040;
 }
-.shop-list{
+#shop-list{
 	width: 810px;
 	height: 40px;
 	margin: 0 auto;
 }
-.shop-list >li{
+#shop-list >li{
 	float: left;
 	width: 80px;
 	height: 40px;
 }
-.shop-list >li:hover{
+#shop-list >li:hover{
 	background: #f01e2d;
 	border-radius: 30px;
 }
-.shop-list >li:hover a{
+#shop-list >li:hover a{
 	color: white;
 }
-.shop-list >li > a{
+#shop-list >li > a{
 	color: #fd4040;
 	font-size: 16px;
 	margin-left: 25px;
@@ -297,23 +304,64 @@ h5{
 .body{
 	position: relative;
 }
-.returnTop{
-	display: block;
-	width: 30px;
-	height: 50px;
-	background: #CCCCCC;
-	color: #666666;
-	font-size: 16px;
-	text-align: center;
-	line-height:25px;
-	position: fixed;
-	top: 350px;
-	right: 5px;
+ .left-nav{
+ 	position: fixed;
+	top: 0;
+	right:0;
+	height: 100%;
+	background: #303030;
+	z-index: 3;
+ }
+.left-nav > .leftnav1{
+   	margin-top: 200px;
 }
-.returnTop:hover{
-	background: #fd4040;
-	color: #FFFFFF;
+.left-nav > li{
+  width: 34px;
+	height: 34px;	
+	overflow: hidden;
+	margin: 10px 0 ;
 }
+.left-nav > li >a{
+ 	display: block;
+	width: 34px;
+	height: 29px;	
+	margin: 7px;
+}
+.left-nav > li >.returnTop{
+  	color: #FFFFFF;
+}
+.left-nav > .leftnav2{
+  	color: #FFFFFF;
+  	height:140px;
+  	text-align: center;
+  	font-size:20px ;
+  	margin-bottom: 50px;
+  	padding-top: 15px;
+}
+.left-nav > .leftnav6{
+	margin: 0;
+}
+.left-nav > li:hover{
+	background: red;
+}
+.left-nav  > li> .hot{
+	top: 30px;
+}
+ .left-nav > .leftnav1 > a{
+ 		background: url(../images/toolbars.png) no-repeat -96px -182px;
+ }
+ .left-nav > .leftnav2 > a{
+ 	background: url(../images/toolbars.png) no-repeat -56px -9px;
+ }
+   .left-nav > .leftnav3 > a{
+ 	background: url(../images/toolbars.png) no-repeat -57px -60px;
+ }
+  .left-nav > .leftnav4 > a{
+ 	background: url(../images/toolbars.png) no-repeat -56px -109px;
+ }
+  .left-nav > .leftnav5 > a{
+ 	background: url(../images/toolbars.png) no-repeat -57px -158px;
+ }
 .footer-top{
 	width: 100%;
 	height: 600px;
@@ -323,18 +371,15 @@ h5{
 	height: 125px;
 	width:1190px;
 	margin: 0 auto;
-	border-bottom: 1px solid #ccc;
 }
 .footer-top{
 	height:270px;
 	background: #FFFFFF;
-	border-top: 1px solid #CCCCCC;
 }
 .footer-top > ul{
 	width: 1190px;
 	height: 100px;
 	margin: 10px auto;
-	border-bottom: 1px solid #CCCCCC;
 }
 .footer-top > ul >li{
 	float: left;
@@ -369,6 +414,7 @@ h5{
 }
 .gz > ul > li{
 	width: 100px;
+	height: 40px;
 	margin: 10px 10px 5px ;
 	color: red;
 	font-size:20px ;

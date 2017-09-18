@@ -1,33 +1,9 @@
-#navbox {
-  width: 1300px;
-  height: 50px;
-  margin: 0 auto;
-  background: #fd4040;
-  overflow: hidden;
-  margin-top: 20px;
-}
-
-#nav li {
-  list-style: none;
-  padding: 14px 49px;
-  float: left;
-}
-
-#nav li:hover {
-  background: #f01e2d;
-}
-
-#nav li a {
-  text-decoration: none;
-  text-align: center;
-  color: white;
-}
 
 #box {
-  width: 1300px;
+  width: 100%;
+  height: 900px;
   margin: 0 auto;
   overflow: hidden;
-  background: #ccc;
 }
 
 #goods-kind li img {
@@ -42,7 +18,7 @@
   height: 380px;
   overflow: hidden;
   position: relative;
-  margin: 40px 10px 5px 10px;
+  margin: 40px 10px 5px 20px;
   background-color: white;
   border: 1px solid #ccc;
   box-sizing: border-box;
@@ -53,7 +29,10 @@
   font-size: 16px;
   text-decoration: none;
 }
-
+#goods-kind li a:hover{
+  color: #fd4040;
+  text-decoration: underline;
+}
 #goods-kind li:hover {
   box-sizing: border-box;
   border: 1px solid #fd4040;
@@ -70,22 +49,19 @@
 .title {
   margin-left: 20px;
 }
-
-#particularbox {
-  position: relative
+.particularbox {
+  position: relative;
+  overflow: hidden;
 }
 
-#particular {
+.particular {
   width: 218px;
-  height: 240px;
+  height: 60px;
   position: absolute;
-  background: rgba(255, 64, 64, 0.7);
-  padding: 10px;
+  opacity: 0;
+  background: rgb(255, 64, 64);
+  padding: 100px 10px;
   font-size: 18px;
   color: white;
-  display: none;
-}
-
-#goods-kind li:hover #particular {
-  display: block;
+  left: -238px;
 }

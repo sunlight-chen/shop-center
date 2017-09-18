@@ -1,4 +1,4 @@
-var order = document.querySelector("#order");
+var order = document.querySelector("#shop-order-list");
 myajax.get("http://h6.duchengjiu.top/shop/api_order.php",{token:localStorage.token},function(err,responseText){
 	var json = JSON.parse(responseText);
 	var data = json.data;
@@ -12,42 +12,41 @@ myajax.get("http://h6.duchengjiu.top/shop/api_order.php",{token:localStorage.tok
 	var goodsHtml = "";
 		for (var j = 0 ; j<obj.goods_list.length; j++) {
             var goods = obj.goods_list[j];
-
             goodsHtml += `
-					<img src = "${goods.goods_thumb}"/>
-					<span>${goods.goods_name}</span>
+					<img src = "${goods.goods_thumb}" class="goods-img"/>
+					<span class = "goods-name">${goods.goods_name}</span>
 					<b>x ${goods.goods_number}</b>
-					<p><a href ="#">售后申请</a></p>
+					<div class = "consignee">${obj.consignee}</div>
 					<div class = "price"><p>总额 ¥ ${goods.goods_price}</p></div>
 					<div class = "state"><p>已完成</p></div>
 					<div class = "other"><span>评价|晒单</span><button><a href = "goods.html">购买其他</a></button></div>
 			`
         }
 		order.innerHTML += `<li>
-			<span class = "cancel-order" data-id="${obj.order_id}">取消订单</span>
+		  <div class = "cancel-order" data-id="${obj.order_id}"><p class="cancel">取消订单</p></div>
 			<div class = "order-goods">
-				${goodsHtml}
+				${goodsHtml}		
 			</div>
 		</li>`
-        console.log(obj.order_id);
  }	
 });
 order.onclick = function(event) {
     event = event || window.event;
     var target = event.target || event.srcElement;
-    if (target.className === 'cancel-order') {
-        if (!confirm('确认要取消订单吗?')) {
-            return;
-        }
-        var tr = target.parentNode;
-        tr.parentNode.removeChild(tr);
-        var order_id = target.dataset.id;
-        myajax.post('http://h6.duchengjiu.top/shop/api_order.php?token='+localStorage.token+'&status=cancel', {order_id}, function(err, responseText) {
+    if (target.className === 'cancel') {
+    	console.log("abc");
+        confirm('确认要取消订单吗?',function(){
+        	var tr = target.parentNode.parentElement;
+        	tr.parentNode.removeChild(tr);
+        	var order_id = target.dataset.id;
+        	myajax.post('http://h6.duchengjiu.top/shop/api_order.php?token='+localStorage.token+'&status=cancel', {order_id}, function(err, responseText) {
             var json = JSON.parse(responseText);
             if (json.code === 0) {
                 alert('订单取消成功');
-
             }
         });
+        },function(){
+        	return;
+        }) ;
     }
 }

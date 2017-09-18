@@ -32,22 +32,22 @@
 			  		  	oNumJia[i].onclick=function(){
 			  		  		oInputNum[i].value=parseInt(oInputNum[i].value)+1;
 			  		  		console.log('i:'+oInputNum[i].value);
+			  		  		if (oInputNum[i].value > 10) {
+                    oInputNum[i].value = 10;
+                  }
 			  		  		oAllTocal[i].innerText='￥'+oInputNum[i].value*parseInt((oTocal[i].innerText).slice(1));
-			  				if (oInputNum[i].value >= 10) {
-			  	         	 oInputNum[i].value = 10;
-			  				}
 			  				getSum();
 			  			}
 			  		 })(i);
 			  		(function (i){
 					  oNumJian[i].onclick = function(){
 					  	oInputNum[i].value = parseInt(oInputNum[i].value) - 1;
+					  	if (oInputNum[i].value <= 1) {
+                oInputNum[i].value = 1;
+                oNumJian[i].style.cursor = 'not-allowed';
+              }
 					  	oAllTocal[i].innerText='￥'+oInputNum[i].value*parseInt((oTocal[i].innerText).slice(1));
 					  	console.log('a:'+oInputNum[i].value);
-					  	if (oInputNum[i].value <= 1) {
-					  		oInputNum[i].value = 1;
-					  		oNumJian[i].style.cursor = 'not-allowed';
-					  	 }
               getSum();
 					   }
 			  		})(i);
@@ -70,7 +70,7 @@
                 tr.parentNode.removeChild(tr);
                 getSum();
               }
-            })
+            });
               alert('删除成功',1000);
             }, function () {
               return;
